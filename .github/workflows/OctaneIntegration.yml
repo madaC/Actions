@@ -20,8 +20,8 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: gitHubActionsIntegration
         with:
-          octaneUrl: 'https://laura-2.almoctane.com'
-          octaneSharedSpace: 1001
+          octaneUrl: 'http://puevm0720.swinfra.net'
+          octaneSharedSpace: 2001
           octaneWorkspace: 1002
           octaneClientId: ${{secrets.ALM_OCTANE_CLIENT_ID}}
           octaneClientSecret: ${{secrets.ALM_OCTANE_CLIENT_SECRET}}
