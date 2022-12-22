@@ -1,4 +1,4 @@
-ame: OctaneIntegration
+name: OctaneIntegration
 
 on:
   workflow_run:
