@@ -1,0 +1,29 @@
+ame: OctaneIntegration
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [requested, completed]
+
+run-name: OctaneIntegration#${{github.event.action}}
+
+jobs:
+  octane_integration_job:
+    runs-on: self-hosted
+    name: Octane Integration
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: GitHub Actions ALM Octane Integration
+        uses: ./ # Uses an action in the root directory
+        id: gitHubActionsIntegration
+        with:
+          octaneUrl: 'https://laura-2.almoctane.com'
+          octaneSharedSpace: 1001
+          octaneWorkspace: 1002
+          octaneClientId: ${{secrets.ALM_OCTANE_CLIENT_ID}}
+          octaneClientSecret: ${{secrets.ALM_OCTANE_CLIENT_SECRET}}
+          githubToken: ${{secrets.GITHUB_TOKEN}}
+          serverBaseUrl: https://github.com/madaC/Actions
