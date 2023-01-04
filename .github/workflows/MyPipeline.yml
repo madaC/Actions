@@ -32,7 +32,7 @@ jobs:
           echo PUBLISHING...
           sleep 2
 build_2:
-   runs-on: ubuntu-latest steps
+   runs-on: ubuntu-latest
    steps:
       - uses: actions/checkout@v3
       - name: Run a two-line script
