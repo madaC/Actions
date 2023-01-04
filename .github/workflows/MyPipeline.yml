@@ -31,3 +31,14 @@ jobs:
         run: | 
           echo PUBLISHING...
           sleep 2
+build_2:
+   runs-on: ubuntu-latest steps
+   steps:
+      - uses: actions/checkout@v3
+      - name: Run a two-line script
+        run: echo Hello, world!
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+          sleep 1
