@@ -12,7 +12,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sleep 1
+          sleep 10
   build_2:
    runs-on: ubuntu-latest
    needs: [build]
@@ -24,7 +24,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          sleep 1
+          sleep 10
   test:
     needs: [build, build_2]
     runs-on: ubuntu-latest
@@ -33,7 +33,7 @@ jobs:
       - name: Running testing script
         run: |
           echo TESTING...
-          sleep 2
+          sleep 5
   publish:
     needs: [build, build_2, test]
     runs-on: ubuntu-latest
@@ -42,5 +42,5 @@ jobs:
       - name: Running testing script
         run: | 
           echo PUBLISHING...
-          sleep 2
+          sleep 5
 
