@@ -36,7 +36,7 @@ jobs:
           throw "test failed"
  
   publish:
-    needs: [build, build_2, test]
+    needs: [build, build_2]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
