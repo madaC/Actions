@@ -3,7 +3,7 @@ on: [workflow_dispatch]
 
 jobs:
   build:
-    runs-on: [self-hosted, Windows]
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
@@ -14,7 +14,7 @@ jobs:
           echo test, and deploy your project.
           sleep 9
   build_2:
-   runs-on: java
+   runs-on: ubuntu-latest
    needs: [build]
    steps:
       - uses: actions/checkout@v3
