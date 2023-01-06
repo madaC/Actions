@@ -9,7 +9,7 @@ run-name: OctaneIntegration#${{github.event.action}}
 
 jobs:
   octane_integration_job:
-    runs-on: [self-hosted, test]
+    runs-on: [self-hosted, java]
     name: Octane Integration
     steps:
       # To use this repository's private action,
