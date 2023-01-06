@@ -33,6 +33,7 @@ jobs:
       - name: Running testing script
         run: |
           echo TESTING...
+          throw "test failed"
  
   publish:
     needs: [build, build_2, test]
