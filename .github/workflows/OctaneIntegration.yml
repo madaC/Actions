@@ -6,7 +6,8 @@ on:
     types: [requested, completed]
 
 run-name: OctaneIntegration#${{github.event.action}}
-
+env: 
+    NODE_TLS_REJECT_UNAUTHORIZED: 0
 jobs:
   octane_integration_job:
     runs-on: test
