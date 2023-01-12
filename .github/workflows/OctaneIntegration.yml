@@ -14,7 +14,7 @@ jobs:
     steps:
       # To use this repository's private action,
       # you must check out the repository
-      - run:  npm config set cafile C:/Users/cocianm/Desktop/swinfra.net.crt
+      - run:  npm config set cafile C:/Users/cocianm/Desktop/swinfra.net.crt --global
       - name: Checkout
         uses: actions/checkout@v3
       - name: GitHub Actions ALM Octane Integration
